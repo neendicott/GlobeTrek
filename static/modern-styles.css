@@ -1,0 +1,90 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a modern font */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Header styles */
+.header {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.header__subtitle {
+    font-size: 1rem;
+}
+
+/* Navigation styles */
+.nav {
+    background-color: #333;
+    padding: 0.5rem;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav__item {
+    margin: 0 1rem;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: #00bfff;
+}
+
+/* Section styles */
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.section__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.section__text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Map container styles */
+.map-container {
+    width: 100%;
+    height: 400px;
+}
+
+/* Button styles */
+.button {
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #007acc;
+}
