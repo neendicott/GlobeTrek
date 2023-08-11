@@ -26,8 +26,12 @@
     <section class="p-4">
         <h2 class="text-xl font-semibold mb-2">Your Travel Map</h2>
         <p>Click on the countries you've visited:</p>
-        <!-- Add your map here -->
         <div id="map" class="w-full h-64"></div> <!-- Create a map container -->
+
+        <!-- Add your map here -->
+
+        <!-- Add the "Undo" button -->
+        <button id="undoButton" class="bg-red-500 text-white px-4 py-2 mt-2">Undo</button>
     </section>
 
     <!-- Add more sections for other features -->
@@ -44,11 +48,28 @@
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19, // Set maximum zoom level
         }).addTo(map);
+
+        var markers = []; // Array to store marker objects
+
+        // Add a click event listener to the map
+        map.on('click', function(event) {
+            var lat = event.latlng.lat;
+            var lng = event.latlng.lng;
+            console.log('Clicked at: ' + lat + ', ' + lng);
+
+            // Add a marker to the map
+            var marker = L.marker([lat, lng]).addTo(map);
+            markers.push(marker); // Store marker in the array
+        });
+
+        // Add a click event listener to the "Undo" button
+        var undoButton = document.getElementById('undoButton');
+        undoButton.addEventListener('click', function() {
+            var lastMarker = markers.pop();
+            if (lastMarker) {
+                map.removeLayer(lastMarker);
+            }
+        });
     </script>
 </body>
 </html>
-
-    <!-- Add more sections for other features -->
-</body>
-</html>
-
