@@ -2,7 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-
 #undoButton {
     background-color: #ef4444;
     color: white;

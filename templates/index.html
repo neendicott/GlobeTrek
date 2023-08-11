@@ -10,18 +10,22 @@
     <title>GlobeTrek - Explore the World</title>
 </head>
 <body>
-    <header class="header">
-        <h1 class="header__title">Welcome to GlobeTrek</h1>
-        <p class="header__subtitle">Explore the world, mark your travels, and connect with friends!</p>
-    </header>
-
+    <!-- Removed the header section -->
+    
     <nav class="nav">
+        <div class="nav__logo">
+            <a href="#" class="nav__logo-link">Global Trek</a>
+        </div>
         <ul class="nav__list">
             <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Profile</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Friends</a></li>
             <li class="nav__item"><a href="#" class="nav__link">Destinations</a></li>
         </ul>
+        <div class="nav__auth">
+            <a href="#" class="nav__auth-link">Log In</a>
+            <a href="#" class="nav__auth-link">Sign Up</a>
+        </div>
     </nav>
 
     <section class="section">
@@ -36,7 +40,7 @@
     </footer>
 
     <script>
-            var map = L.map('map').setView([51.505, -0.09], 2);
+        var map = L.map('map').setView([51.505, -0.09], 2);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19
         }).addTo(map);
@@ -59,5 +63,3 @@
     </script>
 </body>
 </html>
-
-
