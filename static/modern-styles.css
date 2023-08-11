@@ -34,6 +34,7 @@ body {
 .nav {
     background-color: #000;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     border-bottom: 1px solid #444;
@@ -69,14 +70,14 @@ body {
     opacity: 0.8;
     transition: opacity 0.3s;
     position: relative;
-    border-radius: 20px; /* Rounded corners */
-    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
 }
 
 .nav__link:hover {
     opacity: 1;
-    background-color: #f2f2f2; /* Light gray background on hover */
-    color: #333; /* Change text color on hover */
+    background-color: #f2f2f2;
+    color: #333;
 }
 
 .nav__link:before {
@@ -98,13 +99,26 @@ body {
     font-weight: 500;
     opacity: 0.8;
     transition: opacity 0.3s;
-    margin-right: 1rem;
 }
 
-/* Keep Log In and Sign Up links right-aligned */
+/* Adjust margin for Log In and Sign Up links */
 .nav__auth-link:last-child {
-    margin-left: auto;
+    margin-left: 1rem;
     margin-right: 0;
+}
+
+/* Styling for Sign Up link */
+.nav__auth-link.signup {
+    color: #000;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav__auth-link.signup:hover {
+    background-color: #f2f2f2;
+    color: #000;
 }
 
 .section {
