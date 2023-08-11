@@ -92,6 +92,11 @@ abbr:where([title]) {
 Remove the default font size and weight for headings.
 */
 
+/* Styles for the map container */
+#map {
+  width: 100%; /* Full width */
+  height: 400px; /* Adjust the height as needed */
+}
 h1,
 h2,
 h3,

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='leaflet.css') }}">
+    <script src="{{ url_for('static', filename='leaflet.js') }}"></script>
     <title>GlobeTrek - Explore the World</title>
 </head>
 <body>
@@ -25,7 +26,26 @@
         <h2 class="text-xl font-semibold mb-2">Your Travel Map</h2>
         <p>Click on the countries you've visited:</p>
         <!-- Add your map here -->
+        <div id="map" class="w-full h-64"></div> <!-- Create a map container -->
     </section>
+
+    <!-- Add more sections for other features -->
+
+    <footer class="bg-gray-900 text-white p-4 text-center">
+        &copy; 2023 GlobeTrek. All rights reserved.
+    </footer>
+
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([51.505, -0.09], 2); // Set initial view coordinates and zoom level
+
+        // Add a tile layer to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19, // Set maximum zoom level
+        }).addTo(map);
+    </script>
+</body>
+</html>
 
     <!-- Add more sections for other features -->
 
