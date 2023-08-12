@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='modern-styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='leaflet.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='profile.html') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
     <script src="{{ url_for('static', filename='leaflet.js') }}"></script>
     <title>GlobeTrek - Explore the World</title>
 </head>
@@ -35,8 +35,7 @@
                 </ul>
             </li>
             <li class="nav__item">
-                <!-- Update the profile link to include the modal opening functionality -->
-                <a href="#" class="nav__link" id="openProfileButton">Profile</a>
+                <a href="/profile" class="nav__link">Profile</a>
             </li>
             <li class="nav__item">
                 <a href="#" class="nav__link">About</a>
