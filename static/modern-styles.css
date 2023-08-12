@@ -91,6 +91,123 @@ body {
 .nav__submenu a:hover {
     color: #666;
 }
+.nav__item {
+    position: relative;
+}
+
+/* Display the dropdown menu on hover */
+.nav__item:hover .nav__dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style for the dropdown menu */
+.nav__dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.nav__dropdown li {
+    margin: 0.5rem 0;
+}
+
+/* Add hover effect for dropdown menu items */
+.nav__dropdown li a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.25rem 1rem;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav__dropdown li a:hover {
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+.nav__auth-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    margin-left: 1rem;
+}
+
+/* Styling for Sign Up link */
+.nav__auth-link.signup {
+    color: #000;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav__auth-link.signup:hover {
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+//* Style for the dropdown menu items */
+.nav__item {
+    position: relative;
+}
+
+/* Display the dropdown menu on hover */
+.nav__item:hover .nav__dropdown {
+    display: block;
+}
+
+/* Style for the dropdown menu */
+.nav__dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.nav__dropdown.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav__item ul li {
+    margin: 0.5rem 0;
+}
+
+/* Add hover effect for dropdown menu items */
+.nav__item ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav__item ul li a:hover {
+    background-color: #f2f2f2;
+    color: #111;
+}
+
+
 .section {
     padding: 3rem 0;
     text-align: center;
