@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='modern-styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='leaflet.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.html') }}">
     <script src="{{ url_for('static', filename='leaflet.js') }}"></script>
     <title>GlobeTrek - Explore the World</title>
 </head>
@@ -35,7 +35,8 @@
                 </ul>
             </li>
             <li class="nav__item">
-                <a href="#" class="nav__link">Profile</a>
+                <!-- Update the profile link to include the modal opening functionality -->
+                <a href="#" class="nav__link" id="openProfileButton">Profile</a>
             </li>
             <li class="nav__item">
                 <a href="#" class="nav__link">About</a>
@@ -48,6 +49,28 @@
         <p class="section__text">Click on the countries you've visited:</p>
         <div id="map" class="map-container"></div>
         <button id="undoButton" class="button">Undo</button>
+        
+        <!-- Add the following elements for the profile modal -->
+        <div class="modal" id="profileModal">
+            <div class="modal-content">
+                <section class="profile-section">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <!-- Profile picture here -->
+                        </div>
+                        <div class="profile-info">
+                            <h3 class="profile-name">John Doe</h3>
+                            <p class="profile-bio">Travel enthusiast and adventurer.</p>
+                            <ul class="profile-details">
+                                <li><strong>Age:</strong> 28</li>
+                                <li><strong>Location:</strong> New York</li>
+                                <!-- Add more user details here -->
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </section>
 
     <footer class="footer">
@@ -75,6 +98,15 @@
                 map.removeLayer(lastMarker);
             }
         });
+        
+        // Add event listener to open the profile modal
+        var openProfileButton = document.getElementById('openProfileButton');
+        openProfileButton.addEventListener('click', openModal);
+        
+        // ... (rest of your script)
+      
     </script>
+    
+    <!-- Include your profile.js script here if needed -->
 </body>
 </html>

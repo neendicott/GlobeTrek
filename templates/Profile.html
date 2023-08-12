@@ -1,16 +1,65 @@
-<section class="profile-section">
-    <div class="profile-card">
-        <div class="profile-image">
-            <!-- Profile picture here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='modern-styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='leaflet.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+    <script src="{{ url_for('static', filename='leaflet.js') }}"></script>
+    <title>User Profile</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__logo">
+            <a href="#" class="nav__logo-link">GlobeTrek</a>
         </div>
-        <div class="profile-info">
-            <h3 class="profile-name">John Doe</h3>
-            <p class="profile-bio">Travel enthusiast and adventurer.</p>
-            <ul class="profile-details">
-                <li><strong>Age:</strong> 28</li>
-                <li><strong>Location:</strong> New York</li>
-                <!-- Add more user details here -->
-            </ul>
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="#" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">My Friends</a>
+                <ul class="nav__submenu">
+                    <li><a href="#">Add Friends</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">Destinations</a>
+                <ul class="nav__submenu">
+                    <li><a href="#">Visited Places</a></li>
+                    <li><a href="#">Bucket List</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">Profile</a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">About</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="profile-section">
+        <div class="profile-card">
+            <div class="profile-image">
+                <!-- Profile picture here -->
+            </div>
+            <div class="profile-info">
+                <h3 class="profile-name">John Doe</h3>
+                <p class="profile-bio">Travel enthusiast and adventurer.</p>
+                <ul class="profile-details">
+                    <li><strong>Age:</strong> 28</li>
+                    <li><strong>Location:</strong> New York</li>
+                    <!-- Add more user details here -->
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <footer class="footer">
+        &copy; 2023 GlobeTrek. All rights reserved.
+    </footer>
+</body>
+</html>
