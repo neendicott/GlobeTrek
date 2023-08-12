@@ -12,24 +12,6 @@ body {
     color: #333;
 }
 
-/* Header styles */
-.header {
-    background-color: #000;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.header__title {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.header__subtitle {
-    font-size: 1.2rem;
-    opacity: 0.8;
-}
-
 /* Navigation styles */
 .nav {
     background-color: #000;
@@ -61,6 +43,7 @@ body {
 
 .nav__item {
     margin: 0 1rem;
+    position: relative;
 }
 
 .nav__link {
@@ -69,7 +52,6 @@ body {
     font-weight: 500;
     opacity: 0.8;
     transition: opacity 0.3s;
-    position: relative;
     border-radius: 20px;
     padding: 0.5rem 1rem;
 }
@@ -80,47 +62,35 @@ body {
     color: #333;
 }
 
-.nav__link:before {
-    /* ... Same underline styles as before ... */
-}
-
-.nav__link:hover:before {
-    /* ... Same hover underline styles as before ... */
-}
-
-.nav__auth {
-    display: flex;
-    align-items: center;
-}
-
-.nav__auth-link {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    opacity: 0.8;
-    transition: opacity 0.3s;
-}
-
-/* Adjust margin for Log In and Sign Up links */
-.nav__auth-link:last-child {
-    margin-left: 1rem;
-    margin-right: 0;
-}
-
-/* Styling for Sign Up link */
-.nav__auth-link.signup {
-    color: #000;
+/* Style for the dropdown menu */
+.nav__submenu {
+    display: none;
+    position: absolute;
     background-color: #fff;
-    border-radius: 20px;
+    text-align: left;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.nav__item:hover .nav__submenu {
+    display: block;
+}
+
+.nav__submenu li {
+    margin: 0.5rem 0;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-.nav__auth-link.signup:hover {
-    background-color: #f2f2f2;
+.nav__submenu a {
     color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
+.nav__submenu a:hover {
+    color: #666;
+}
 .section {
     padding: 3rem 0;
     text-align: center;
