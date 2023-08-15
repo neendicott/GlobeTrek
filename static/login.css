@@ -9,6 +9,23 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
+    margin: 0; /* Remove default margins */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Style for the all-black nav bar */
+.nav {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    margin: 0; /* Remove any margins */
+}
+.nav__logo-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px; /* Adjust the left margin to position GlobeTrek to the right */
 }
 
 /* Create a centered container for the form */
@@ -21,6 +38,7 @@ body {
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-top: 50px; /* Add some top margin to center the form vertically */
 }
 
 /* Style the form header */
@@ -38,11 +56,11 @@ body {
     border-radius: 4px;
 }
 
-/* Style the submit button */
+/* Add this style for the login button */
 .container button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #000000; /* Change to black */
     color: #ffffff;
     border: none;
     border-radius: 4px;
@@ -51,7 +69,7 @@ body {
 }
 
 .container button:hover {
-    background-color: #0056b3;
+    background-color: #333333; /* Change to a darker shade of black */
 }
 
 /* Style the "Don't have an account?" link */
