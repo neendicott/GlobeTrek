@@ -1,10 +1,17 @@
 from flask import Flask, render_template
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__, static_url_path='/static')
 
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
+
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    password = db.Column(db.String(60), nullable=False)
 
 @app.route('/')
 def index(): 
