@@ -88,3 +88,14 @@ body {
 .container a:hover {
     color: #0056b3;
 }
+
+/* Style the footer */
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
