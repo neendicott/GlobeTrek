@@ -7,7 +7,8 @@ app = Flask(__name__, static_url_path='/static')
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'  # Replace with your database URI
+# Use a generic database URI format
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://username:password@localhost/dbname'  # Replace with your database URI
 db = SQLAlchemy(app)
 
 class User(db.Model, UserMixin):
