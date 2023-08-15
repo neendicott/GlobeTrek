@@ -8,7 +8,13 @@ def index():
 
 @app.route('/profile')
 def profile():
-    return render_template('profile.html')
+    user = {
+        'name': 'John Doe',
+        'bio': 'Travel enthusiast and adventurer.',
+        'location': 'New York',
+        'age': 28,
+    }
+    return render_template('profile.html', user=user)
 
 if __name__ == '__main__':
     app.run(debug=True)
