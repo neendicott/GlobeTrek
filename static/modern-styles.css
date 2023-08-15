@@ -221,6 +221,52 @@ body {
     color: #000;
 }
 
+.nav__auth-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    margin-left: 1rem;
+}
+
+.nav__auth-link:hover {
+    opacity: 1;
+    color: #f2f2f2; /* Light gray color */
+}
+
+/* Styling for Log In link */
+.nav__auth-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.3s, background-color 0.3s, color 0.3s;
+    margin-left: 1rem;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+}
+
+.nav__auth-link:hover {
+    opacity: 1;
+    background-color: #f2f2f2; /* Light gray color */
+    color: #000;
+}
+
+/* Styling for Sign Up link */
+.nav__auth-link.signup {
+    color: #000;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav__auth-link.signup:hover {
+    background-color: #f2f2f2; /* Light gray color */
+    color: #000;
+}
+
 
 .section {
     padding: 3rem 0;
