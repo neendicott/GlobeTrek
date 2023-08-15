@@ -7,6 +7,9 @@ app = Flask(__name__, static_url_path='/static')
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'  # Replace with your database URI
+db = SQLAlchemy(app)
+
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
