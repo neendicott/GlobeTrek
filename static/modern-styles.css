@@ -207,6 +207,20 @@ body {
     color: #111;
 }
 
+/* Styling for Sign Up link */
+.nav__auth-link.signup {
+    color: #000;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav__auth-link.signup:hover {
+    background-color: #f2f2f2; /* Light gray color */
+    color: #000;
+}
+
 
 .section {
     padding: 3rem 0;
